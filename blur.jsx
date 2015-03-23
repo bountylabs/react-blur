@@ -31,8 +31,9 @@ var ReactBlur = React.createClass({
         var ctx = Blur.canvas.getContext('2d');
         Blur.img = new Image;
         Blur.img.onload = function(){
-            stackBlurImage( Blur.img, Blur.canvas, blurRadius, Blur.width, Blur.height)
-        };
+            stackBlurImage( Blur.img, Blur.canvas, blurRadius, Blur.width, Blur.height);
+            if (this.props.onLoadFunction && typeof this.props.onLoadFunction === "function") this.props.onLoadFunction();
+        }.bind(this);
         Blur.img.src = Blur.props.img;
     },
 
