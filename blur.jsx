@@ -33,13 +33,14 @@ var ReactBlur = React.createClass({
         Blur.img.crossOrigin = "Anonymous";
         Blur.img.onload = function(){
             stackBlurImage( Blur.img, Blur.canvas, blurRadius, Blur.width, Blur.height);
-            Blur.img.src = Blur.props.img;
             if (this.props.onLoadFunction && typeof this.props.onLoadFunction === "function") this.props.onLoadFunction();
         }.bind(this);
         Blur.img.onerror = function(){
             Blur.img.src = "";
             if (this.props.onLoadFunction && typeof this.props.onLoadFunction === "function") this.props.onLoadFunction();
         }.bind(this);
+
+        Blur.img.src = Blur.props.img;
     },
 
     componentWillReceiveProps(nextProps) {
