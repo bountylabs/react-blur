@@ -40,11 +40,6 @@ function stackBlurImage(img, canvas, radius, w, h) {
     var nw = img.naturalWidth;
     var nh = img.naturalHeight;
 
-    canvas.style.width = w + "px";
-    canvas.style.height = h + "px";
-    canvas.width = w;
-    canvas.height = h;
-
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, w, h);
 
