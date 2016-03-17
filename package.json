@@ -2,9 +2,10 @@
   "name": "react-blur",
   "version": "0.0.9",
   "description": "React component for creating blurred backgrounds.",
-  "main": "blur.js",
+  "main": "lib/blur.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel -d lib/ src/"
   },
   "keywords": [
     "react",
@@ -17,6 +18,12 @@
   ],
   "author": "javierbyte",
   "license": "ISC",
+  "dependencies": {
+    "core-js": "^0.6.0"
+  },
+  "devDependencies": {
+    "babel": "^4.6.0"
+  },
   "peerDependencies": {
     "react": "^0.14.7"
   }
