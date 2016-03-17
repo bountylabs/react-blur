@@ -1,4 +1,5 @@
 var React = require('react'),
+  ReactDOM = require('react-dom'),
   PureRenderMixin = require('react-addons-pure-render-mixin'),
   stackBlurImage = require('./StackBlur.js');
 
@@ -38,12 +39,12 @@ var ReactBlur = React.createClass({
 
   setDimensions() {
     var Blur = this;
-    var container = Blur.getDOMNode();
+    var container = ReactDOM.findDOMNode(Blur);
 
     Blur.height = Blur.props.height || container.offsetHeight;
     Blur.width = Blur.props.width || container.offsetWidth;
 
-    Blur.canvas = Blur.refs.canvas.getDOMNode();
+    Blur.canvas = Blur.refs.canvas;
     Blur.canvas.height = Blur.height;
     Blur.canvas.width = Blur.width;
   },
