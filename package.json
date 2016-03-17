@@ -17,16 +17,6 @@
   ],
   "author": "javierbyte",
   "license": "ISC",
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "es6": true
-        }
-      ]
-    ]
-  },
   "peerDependencies": {
     "react": "^0.14.7"
   }
