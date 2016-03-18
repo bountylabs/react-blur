@@ -25,7 +25,7 @@ var ReactBlur = React.createClass({
   componentDidMount() {
     var Blur = this;
     this.setDimensions(Blur);
-    this.loadImage(props, Blur);
+    this.loadImage(this.props, Blur);
   },
   loadImage(props, Blur) {
     Blur.img = new Image;
